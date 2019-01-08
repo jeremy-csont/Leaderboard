@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teams - Zappy Leaderboard{% endblock %}
+
+{% block body %}
+    <div class="listTeams">
+    {% for team in teams %}
+        <div class="listTeamsElement">
+            <a href="{{ path('team',{'name':team.name}) }}">{{ team.name }}</a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

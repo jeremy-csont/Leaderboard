@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ranking - Zappy Leaderboard{% endblock %}
+
+{% block body %}
+    <table class="rankingTable">
+        <tr class="">
+            <th>Nom de l'équipe</th>
+            <th>Nombre de victoires</th>
+            <th>Nombre de match nulle</th>
+            <th>Nombre de défaites</th>
+            <th>Nombre de points</th>
+        </tr>
+        {% for team in teams %}
+        <tr class="rankingRowTable">
+            <th>
+                <a href="{{ path('team',{'name':team.name}) }}">{{ team.name }}</a>
+            </th>
+            <th>
+                {% set nbwin = 0 %}
+                {% for match in matches%}
+                    {% if (team.id == match.idTeam1.id and match.winner == 1) or (team.id == match.idTeam2.id and match.winner == 2)%}
+                        {% set nbwin = nbwin+1 %}
+                    {% endif %}
+                {% endfor %}
+                {{ nbwin }}
+            </th>
+            <th>
+                {% set nbnull = 0 %}
+                {% for match in matches%}
+                    {% if (team.id == match.idTeam1.id and match.winner == 0) or (team.id == match.idTeam2.id and match.winner == 0)%}
+                        {% set nbnull = nbnull+1 %}
+                    {% endif %}
+                {% endfor %}
+                {{ nbnull }}
+            </th>
+            <th>
+                {% set nblose = 0 %}
+                {% for match in matches%}
+                    {% if (team.id == match.idTeam1.id and match.winner == 2) or (team.id == match.idTeam2.id and match.winner == 1)%}
+                        {% set nblose = nblose+1 %}
+                    {% endif %}
+                {% endfor %}
+                {{ nblose }}
+            </th>
+            <th>
+                {% set nbpoints = 3*nbwin + 1*nbnull + 0*nblose %}
+                {{ nbpoints }}
+            </th>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

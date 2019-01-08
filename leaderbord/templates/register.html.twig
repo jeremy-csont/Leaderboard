@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register - Zappy Leaderboard{% endblock %}
+
+{% block page %}Inscription{% endblock %}
+{% block body %}
+    <form class=".register">
+        <p>Nom : </p><input title="FName" type="text" /><br>
+        <p>Prénom : </p><input title="LName" type="text" /><br>
+        <p>Pseudo : </p><input title="Pseudo" type="text" /><br>
+        <p>Mot de passe : </p><input title="Pass" type="password" /><br>
+        <p>Date de Naissance : </p><input title="BornDate" type="date" /><br>
+        <p>Sexe : </p><select title="Gender">
+            <option value="M">Homme</option>
+            <option value="F">Femme</option>
+        </select><br>
+        <input type="submit" value="Créer mon compte"/>
+    </form>
+{% endblock %}

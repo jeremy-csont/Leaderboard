@@ -1,0 +1,104 @@
+.body{
+    background-image: url("../images/background2.jpg");
+    width: 100%;
+    min-width: 760px;
+}
+
+.content {
+    box-sizing: border-box;
+    background-color: #323232;
+	width: 80%;
+    margin:auto;
+    border: 0;
+    padding:0;
+}
+
+.title {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 10px 0;
+    text-align: center;
+	text-decoration: underline;
+    color: crimson;
+}
+
+.menu {
+    box-sizing: border-box;
+	width: 100%;
+    background-color: crimson;
+    margin: 0;
+    border: 0;
+    padding: 20px 0;
+    list-style: none ;
+    text-align: left;
+}
+
+.menu li {
+	display: inline;
+	margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.menu li a {
+    margin: 0;
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding: 20px 50px;
+    line-height: 1em ;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    color:black;
+}
+
+.menu li a:hover, .menu li a:focus, .menu li a:active {
+    text-decoration: underline;
+}
+
+.main {
+	border: black solid 2px;
+}
+
+.footer {
+    box-sizing: border-box;
+    background-color: crimson;
+    width: 100%;
+    margin: 0;
+	border: 0;
+    padding: 20px 0;
+	text-align: center;
+}
+
+.footer a {
+    box-sizing: border-box;
+    margin: 0;
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding: 20px 50px;
+    line-height: 1em ;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder;
+    color:black;
+}
+
+.footer a:hover, .footer a:focus, .footer a:active {
+    text-decoration: underline;
+}
+
+.\.register {
+    color:crimson;
+}
+
+.login {
+    color:crimson;
+}

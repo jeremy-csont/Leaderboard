@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        {% block stylesheets %}{% endblock %}</head>
+    <body class="body">
+        <div class="content">
+            <h1 class="title">{% block page %}{% endblock %}</h1>
+            <ul class="menu">
+                <li><a href="{{ path('index') }}">Index</a></li>
+                <li><a href="{{ path('ranking') }}">Ranking</a></li>
+                <li><a href="{{ path('teams') }}">Teams</a></li>
+                <li><a href="{{ path('login') }}">Login</a></li>
+                <li><a href="{{ path('register') }}">Register</a></li>
+            </ul>
+            <div class="main">
+                {% block body %}{% endblock %}
+            </div>
+            <footer class="footer"><a href="">Contact</a></footer>
+        </div>
+        {% block js %}{% endblock %}
+    </body>
+</html>
